@@ -1,6 +1,7 @@
 {
     "name": "ekolo/http",
     "description": "Permet de gérer les différentes requêtes et réponses http et d'autres fonctionnalité liées au protol http",
+    "keywords": ["ekolo", "http", "eko", "request", "response", "post", "body", "get"],
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -10,7 +11,7 @@
         }
     ],
     "require": {
-        "php": "^7.1.3"
+        "php": ">=7.0"
     },
     "autoload": {
         "psr-4": {
