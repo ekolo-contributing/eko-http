@@ -65,7 +65,7 @@ echo $request->params()->nom; // Etokila
 #### Request::params()->key()
 
 Ceci est l'appelle des méthodes magiques si on ne veut pas récuperer par des attributs
-`key` : C'est le nom de la variable à récuperer
+* `key` : C'est le nom de la variable à récuperer
 
 ```php
 echo $request->params()->nom(); // Etokila
@@ -81,8 +81,8 @@ echo $request->params()->get('nom'); // Etokila
 
 #### Request::params()->get($key, $default = null)
 
-`$key` : C'est le nom de la variable à récuperer
-`$default` : C'est la valeur par défaut au cas où cette variable n'existe pas
+* `$key` : C'est le nom de la variable à récuperer
+* `$default` : C'est la valeur par défaut au cas où cette variable n'existe pas
 
 ```php
 echo $request->params()->get('fonction', 'Professesur'); // Professesur
@@ -90,8 +90,8 @@ echo $request->params()->get('fonction', 'Professesur'); // Professesur
 
 #### Request::params($key, $default)
 
-`$key` : C'est le nom de la variable à récuperer
-`$default` : C'est la valeur par défaut au cas où cette variable n'existe pas
+* `$key` : C'est le nom de la variable à récuperer
+* `$default` : C'est la valeur par défaut au cas où cette variable n'existe pas
 
 ```php
 echo $request->params('grade', 'Médecin'); // Médecin
