@@ -1,0 +1,66 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "2d0e60e21146fbe5163704a391f792ba",
+    "packages": [
+        {
+            "name": "ekolo/eko-magic",
+            "version": "0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ekolo-contributing/eko-magic.git",
+                "reference": "f774d98f7b64b3593c5fbd19a7b2833e5eedacab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ekolo-contributing/eko-magic/zipball/f774d98f7b64b3593c5fbd19a7b2833e5eedacab",
+                "reference": "f774d98f7b64b3593c5fbd19a7b2833e5eedacab",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "lbrary",
+            "autoload": {
+                "psr-4": {
+                    "Ekolo\\Component\\EkoMagic\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Don de Dieu BOLENGE",
+                    "email": "dondedieubolenge@gmail.com"
+                }
+            ],
+            "description": "Module permet de g\u0000n\u0000rer des m\u0000thodes magiques",
+            "keywords": [
+                "bag",
+                "eko",
+                "eko-magic",
+                "ekolo",
+                "magic",
+                "magique",
+                "parameter",
+                "parameterbag"
+            ],
+            "time": "2020-02-21T12:03:18+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.0"
+    },
+    "platform-dev": []
+}

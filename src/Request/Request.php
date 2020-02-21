@@ -5,7 +5,8 @@
      */
 	namespace Ekolo\Component\Http;
 
-	use Ekolo\Component\Http\Params;
+	use Ekolo\Component\Http\Options\Params;
+	use Ekolo\Component\Http\Options\Bodies;
 	use Ekolo\Component\Http\HTTPRequest;
 
     /**
@@ -13,23 +14,39 @@
      */
     class Request extends HTTPRequest implements RequestInterface {
 
-		protected $params;
+		protected $params,
+				  $body, 
+				  $bodies,
+				  $input;
 
 		public function __construct()
 		{
 			parent::__construct();
 			$this->params = new Params;
+			$this->body   = new Bodies;
 		}
 
         /**
 		 * @see RequestInterface::params()
 		 */
-		public function params($key = null)
+		public function params($key = null, $default = null)
 		{
 			if ($key) {
-				return isset($this->params->$key) ? $this->params->$key : null;
+				return $this->params->has($key) ? $this->params->get($key) : $default;
 			}else {
 				return $this->params;
+			}
+		}
+		
+		/**
+		 * @see RequestInterface::body()
+		 */
+		public function body($key = null, $default = null)
+		{
+			if ($key) {
+				return $this->body->has($key) ? $this->body->get($key) : $default;
+			}else {
+				return $this->body;
 			}
         }
         
@@ -38,15 +55,7 @@
 		 */
 		public function paramExists($key)
 		{
-			return isset($this->params->$key);
-		}
-
-		/**
-		 * Renvoi le request uri
-		 */
-		public function requestUri()
-		{
-			return $this->server->get('REQUEST_URI');
+			return $this->params->has($key);
 		}
 
 		/**
@@ -56,5 +65,14 @@
 		public function method()
 		{
 			return $this->server->get('REQUEST_METHOD') ? $this->server->get('REQUEST_METHOD') : 'GET';
+		}
+
+		/**
+		 * Renvoi l'uri (url) demandé par le client
+		 * @return string
+		 */
+		public function uri()
+		{
+			return $this->requestUri();
 		}
     }

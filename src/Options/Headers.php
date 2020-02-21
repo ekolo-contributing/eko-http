@@ -3,9 +3,9 @@
      * Ce fichier est un component du Framework Ekolo
      * (c) Don de Dieu BOLENGE <dondedieubolenge@gmail.com>
      */
-    namespace Ekolo\Component\Http;
+    namespace Ekolo\Component\Http\Options;
     
-    use Ekolo\Component\Http\Astuces\ParameterBag;
+    use Ekolo\Component\EkoMagic\ParameterBag;
 
     /**
      * Controlle les headers

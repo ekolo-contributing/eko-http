@@ -5,8 +5,8 @@
      */
     namespace Ekolo\Component\Http;
     
-    use Ekolo\Component\Http\Server;
-    use Ekolo\Component\Http\Headers;
+    use Ekolo\Component\Http\Options\Server;
+    use Ekolo\Component\Http\Options\Headers;
 
     /**
      * Répertorie les varibles http et d'autres fonctionnalités
@@ -111,6 +111,15 @@
 		public function httpHost()
 		{
 			return $this->server->get('HTTP_HOST');
+		}
+
+		/**
+		 * Renvoi le request uri
+		 * @return string
+		 */
+		public function requestUri()
+		{
+			return $this->server->get('REQUEST_URI');
 		}
 
 		/**

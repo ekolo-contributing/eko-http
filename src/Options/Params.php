@@ -3,18 +3,18 @@
      * Ce fichier est une partie du Framework Ekolo
      * (c) Don de Dieu BOLENGE <dondedieubolenge@gmail.com>
      */
-    namespace Ekolo\Component\Http;
+    namespace Ekolo\Component\Http\Options;
     
-    use Ekolo\Component\Http\Astuces\ParameterBag;
+    use Ekolo\Component\EkoMagic\ParameterBag;
 
     /**
-     * Controlle les paramètres de $_SERVER et d'autres fonctionnalités liées au serveur
+     * Controlle les paramètres de $_GET
      */
-    class Server extends ParameterBag {
+    class Params extends ParameterBag {
 
         public function __construct(array $vars = [])
         {
-            $vars = !empty($vars) ? $vars : $_SERVER;
+            $vars = !empty($vars) ? $vars : $_GET;
             parent::__construct($vars);
         }
     }
