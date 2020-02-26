@@ -27,7 +27,10 @@
 		}
 
         /**
-		 * @see RequestInterface::params()
+		 * Manipule et renvoi les données du type GET stockées dans $_GET
+		 * @param string $key La clé de la variable
+		 * @param mixed $default La valeur par défault au cas où cette variable n'existe pas
+		 * @return mixed|Params
 		 */
 		public function params($key = null, $default = null)
 		{
@@ -39,7 +42,10 @@
 		}
 		
 		/**
-		 * @see RequestInterface::body()
+		 * Manipule et renvoi les données du type POST stockées dans $_POST
+		 * @param string $key La clé de la valeur
+		 * @param mixed $default la valeur par défaut au cas où cette variable n'existe pas
+		 * @return mixed|Bodies
 		 */
 		public function body($key = null, $default = null)
 		{
@@ -48,10 +54,23 @@
 			}else {
 				return $this->body;
 			}
-        }
+		}
+		
+		/**
+		 * Manipule et renvoi les données du type POST stockées dans $_POST
+		 * @param string $key La clé de la valeur
+		 * @param mixed $default la valeur par défaut au cas où cette variable n'existe pas
+		 * @return mixed|Bodies
+		 */
+		public function input($key = null, $default = null)
+		{
+			return $this->body($key, $default);
+		}
         
         /**
-		 * RequestInterface::paramExists()
+		 * Vérifie s'il y a une la variable $_GET[$key]
+		 * @param string $key La clé de la variable
+		 * @return mixed
 		 */
 		public function paramExists($key)
 		{
