@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d0e60e21146fbe5163704a391f792ba",
+    "content-hash": "872cbf56d083e9876cdf7c1795e4f282",
     "packages": [
         {
             "name": "ekolo/eko-magic",
-            "version": "0.2",
+            "version": "0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ekolo-contributing/eko-magic.git",
-                "reference": "f774d98f7b64b3593c5fbd19a7b2833e5eedacab"
+                "reference": "007f8b68be53abea10d1953df35123547e9f798b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ekolo-contributing/eko-magic/zipball/f774d98f7b64b3593c5fbd19a7b2833e5eedacab",
-                "reference": "f774d98f7b64b3593c5fbd19a7b2833e5eedacab",
+                "url": "https://api.github.com/repos/ekolo-contributing/eko-magic/zipball/007f8b68be53abea10d1953df35123547e9f798b",
+                "reference": "007f8b68be53abea10d1953df35123547e9f798b",
                 "shasum": ""
             },
             "require": {
@@ -50,7 +50,7 @@
                 "parameter",
                 "parameterbag"
             ],
-            "time": "2020-02-21T12:03:18+00:00"
+            "time": "2020-02-26T12:38:47+00:00"
         }
     ],
     "packages-dev": [],

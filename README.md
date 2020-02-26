@@ -177,7 +177,7 @@ use Ekolo\Component\Http\Request;
 
 $request = new Request;
 
-echo $request->headers()->get('User-Agent')
+echo $request->headers()->get('User-Agent');
 
 print_r($request-server()->all());
 /*
@@ -193,6 +193,23 @@ Array
     ...
 )
 */
+```
+
+### Request::input()
+
+Cette méthode est juste un synonyme pour de body
+
+L'utilisation de cette méthode est égale à celle de `body`
+
+```php
+use Ekolo\Component\Http\Request;
+
+$request = new Request;
+$request->input()->set('nom', 'mbuyu');
+
+echo $request->input()->get('nom');
+
+print_r($request-server()->all());
 ```
 
 > Attention pour les clés qui ont de tiret `-`, là le génarateur des attributs et des méthodes ne les prend pas en charge, du cout ces valeurs ne peuvent être récuperées que par `get('User-agent')` ou `params('user-name')` ou `body('encore-ici')'` ainsi de suite
