@@ -15,12 +15,21 @@ $ composer require ekolo/http
 `ekolo/http` contient des dossiers qui à leurs tours contiennent des classes pour faciliter la tâche aux développeurs.
 
 1. `src` Dossier principal de la librairie
-    * `Astuces` : Contient quelques classes astuces
+    * `Options` : Contient quelques classes qui à gérer des éléments optionnnelement.
+        * `Bodies` : Gère les données venue par la méthode `POST`
+        * `Headers` : Gère les headers
+        * `Params` : Gère les données venue par la méthode `GET`
+        * `Params` : Gère les données et des variables server `$_SERVER`
     * `Request` : Contient des classes qui alimente la class `Request` qui gère les requêtes `http`
+    * `Response` : Contient des classes qui alimente la class `Response` qui gère les réponses `http`
 
 Pour plus des détails sur ces classes il serait mieux de parcourir le code source de chaque classe.
 
-### Request::params()
+### class Request
+
+Gère les requêtes `http`
+
+#### Request::params()
 
 Cette méthode permet de récuper et de manipuler les données (variables) envoyées par la méthode GET qui sont généralement stockées la variable super globale `$_GET`
 
@@ -36,7 +45,7 @@ $_GET = [
 $request = new Request;
 ```
 
-#### Request::params($key)
+##### Request::params($key)
 
 `$key` : C'est le nom de la variable à récuperer
 
@@ -54,7 +63,7 @@ $request = new Request;
 echo $request->params('nom'); // Etokila
 ```
 
-#### Request::params()->key
+##### Request::params()->key
 
 `key` : C'est le nom de la variable à récuperer
 
@@ -62,7 +71,7 @@ echo $request->params('nom'); // Etokila
 echo $request->params()->nom; // Etokila
 ```
 
-#### Request::params()->key()
+##### Request::params()->key()
 
 Ceci est l'appelle des méthodes magiques si on ne veut pas récuperer par des attributs
 * `key` : C'est le nom de la variable à récuperer
@@ -71,7 +80,7 @@ Ceci est l'appelle des méthodes magiques si on ne veut pas récuperer par des a
 echo $request->params()->nom(); // Etokila
 ```
 
-#### Request::params()->get($key)
+##### Request::params()->get($key)
 
 `$key` : C'est le nom de la variable à récuperer
 
@@ -79,7 +88,7 @@ echo $request->params()->nom(); // Etokila
 echo $request->params()->get('nom'); // Etokila
 ```
 
-#### Request::params()->get($key, $default = null)
+##### Request::params()->get($key, $default = null)
 
 * `$key` : C'est le nom de la variable à récuperer
 * `$default` : C'est la valeur par défaut au cas où cette variable n'existe pas
@@ -88,7 +97,7 @@ echo $request->params()->get('nom'); // Etokila
 echo $request->params()->get('fonction', 'Professesur'); // Professesur
 ```
 
-#### Request::params($key, $default)
+##### Request::params($key, $default)
 
 * `$key` : C'est le nom de la variable à récuperer
 * `$default` : C'est la valeur par défaut au cas où cette variable n'existe pas
@@ -97,7 +106,7 @@ echo $request->params()->get('fonction', 'Professesur'); // Professesur
 echo $request->params('grade', 'Médecin'); // Médecin
 ```
 
-#### Request::params()->all()
+##### Request::params()->all()
 
 Renvoi le tableau contenant toutes les varibles
 
@@ -116,7 +125,7 @@ print_r($request->params()->all());
 
 > En bref, le `params` est une instance de l'objet `ParameterBag` qui est une classe de la librairie `eko-magic`. Pour plus d'information aller sur sa [documentation](https://github.com/ekolo-contributing/eko-magic).
 
-### Request::body()
+#### Request::body()
 
 Cette méthode permet de récuperer les données envoyées par la méthode `POST`, génralement stockées dans la variable super globale `$_POST`.
 
@@ -136,7 +145,7 @@ $request->body()->add([
 echo $request->body()->prenom();
 ```
 
-### Request::server()
+#### Request::server()
 
 Cette méthode permet de récuperer les données du serveur, génralement stockées dans la variable super globale `$_SERVER`.
 
@@ -166,7 +175,7 @@ Array
 */
 ```
 
-### Request::headers()
+#### Request::headers()
 
 Cette méthode permet de récuperer les headers envoyés.
 
@@ -195,7 +204,7 @@ Array
 */
 ```
 
-### Request::input()
+#### Request::input()
 
 Cette méthode est juste un synonyme pour de body
 
@@ -213,3 +222,9 @@ print_r($request-server()->all());
 ```
 
 > Attention pour les clés qui ont de tiret `-`, là le génarateur des attributs et des méthodes ne les prend pas en charge, du cout ces valeurs ne peuvent être récuperées que par `get('User-agent')` ou `params('user-name')` ou `body('encore-ici')'` ainsi de suite
+
+### class Response
+
+Gère les réponses `http`
+
+Pour plus de détails consulter les codes sources dans `src/Response`

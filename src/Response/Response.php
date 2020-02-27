@@ -103,7 +103,16 @@
                 $this->setStatus($code, $string);
             }
 
-            if ($type == 'application/json') {
+            if ($type == 'text/html') {
+                if (!is_array($data)) {
+                    echo $data;
+                }else {
+                    echo '<pre>';
+                    print_r($data);
+                    echo '</pre>';
+                    die();
+                }
+            }elseif ($type == 'application/json') {
                 echo json_encode($data);
 			    die();
             }else {

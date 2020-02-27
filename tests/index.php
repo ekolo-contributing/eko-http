@@ -10,8 +10,4 @@
     $request = new Request;
     $response = new Response;
 
-    ob_start();
-    require 'view.php';
-    $content = ob_get_clean();
-
-    require $extend.'.php';
+    $response->send('<h1>Salut les amis</h1>');
