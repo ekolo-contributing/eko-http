@@ -1,5 +1,5 @@
 {
-    "name": "ekolo/http",
+    "name": "ekolo/eko-http",
     "description": "Permet de gérer les différentes requêtes et réponses http et d'autres fonctionnalité liées au protol http",
     "keywords": ["ekolo", "http", "eko", "request", "response", "post", "body", "get"],
     "type": "library",
