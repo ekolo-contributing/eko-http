@@ -9,7 +9,7 @@
     use Ekolo\Component\Http\Options\Headers;
 
     /**
-     * Répertorie les varibles http et d'autres fonctionnalités
+     * Répertorie les variables http et d'autres fonctionnalités
      */
     class HTTPRequest {
 
