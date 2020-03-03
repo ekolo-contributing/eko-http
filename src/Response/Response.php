@@ -37,13 +37,17 @@
         }
 
         /**
-         * Permet d'ajouter un header dans la response à donner
-         * @param string $header Le header à ajouter
+         * Permet d'ajouter les headers dans la response à donner
+         * @param array $headers Les headers à ajouter
          * @return void
          */
-        public function addHeader(string $header)
+        public function addHeaders(array $headers)
         {
-            header($header);
+            if (!empty($headers)) {
+                foreach ($headers as $header) {
+                    header($header);
+                }
+            }
         }
 
         /**
@@ -63,47 +67,36 @@
          */
         public function redirect(string $url)
         {
-            $this->addHeader('Location: '.$url);
+            $this->addHeaders(['Location: '.$url]);
             exit;
         }
 
         /**
          * Permet de modifier le status
-         * @param int $code Le code du status
-         * @param string $string
+         * @param int $status Le code du status
          * @return void
          */
-        public function setStatus(int $code, string $string)
+        public function setStatus(int $status = null)
         {
-            $this->addHeader($this->server->SERVER_PROTOCOL().' '.$code.' '.$string);
+            if (!empty($status)) {
+                $this->addHeaders([$this->server->SERVER_PROTOCOL().' '.$status]);
+            }
         }
 
         /**
          * Permet de renvoyer les données
          * @param mixed $data Les données à afficher
-         * @param string $type Le type de données à envoyer
+         * @param array $headers Les headers à envoyer
          * @param mixed $status Le status
          */
-        public function send($data, $type = 'text/html', $status = null)
+        public function send($data, array $headers = [], int $status = null)
         {
-            $this->addHeader('Content-Type: '.$type);
+            $this->addHeaders($headers);
+            $this->setStatus($status);
 
-            if ($status !== null) {
-                if (\is_array($status)) {
-                    \extract($status);
-                }else {
-                    $code = $status;
-                    $string = '';
-                }
-    
-                if (!isset($code)) {
-                    throw new Exception("Le status doit être numérique ou un tableau ['code' => 404, 'string' => 'Not Found']");
-                }
-                
-                $this->setStatus($code, $string);
-            }
-
-            if ($type == 'text/html') {
+            if (in_array('Content-Type: application/json', $headers)) {
+                echo json_encode($data);
+            }else {
                 if (!is_array($data)) {
                     echo $data;
                 }else {
@@ -112,14 +105,6 @@
                     echo '</pre>';
                     die();
                 }
-            }elseif ($type == 'application/json') {
-                echo json_encode($data);
-			    die();
-            }else {
-                echo '<pre>';
-                print_r($data);
-                echo '</pre>';
-                die();
             }
         }
         
@@ -128,8 +113,9 @@
          * @param mixed $data Les données à renvoyer
          * @param mixed $status
          */
-        public function json($data, $status)
+        public function json($data, array $headers = [], int $status = null)
         {
+            $headers[] = 'Content-Type: application/json';
             $this->send($data, 'application/json', $status);
         }
     }
