@@ -13,7 +13,7 @@
     "require": {
         "php": ">=7.0",
         "ekolo/eko-magic": "^0.3.0",
-        "ekolo/eko-session": "^0.0.4"
+        "ekolo/eko-session": "^0.0.5"
     },
     "autoload": {
         "files": ["src/Helpers/functions.php"],
