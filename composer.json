@@ -12,9 +12,11 @@
     ],
     "require": {
         "php": ">=7.0",
-        "ekolo/eko-magic": "^0.3.0"
+        "ekolo/eko-magic": "^0.3.0",
+        "ekolo/eko-session": "^0.0.4"
     },
     "autoload": {
+        "files": ["src/Helpers/functions.php"],
         "psr-4": {
             "Ekolo\\Component\\Http\\": "src/"
         }

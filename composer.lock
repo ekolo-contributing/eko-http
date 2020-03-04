@@ -4,8 +4,50 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "872cbf56d083e9876cdf7c1795e4f282",
+    "content-hash": "fb1c96198b9c4de3481c1bd4bb67d3d3",
     "packages": [
+        {
+            "name": "ekolo/eko-helpers",
+            "version": "0.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ekolo-contributing/eko-helpers.git",
+                "reference": "f5e4e5b4b0ba66c2a96bef78287fc0a94da69ebb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ekolo-contributing/eko-helpers/zipball/f5e4e5b4b0ba66c2a96bef78287fc0a94da69ebb",
+                "reference": "f5e4e5b4b0ba66c2a96bef78287fc0a94da69ebb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Don de Dieu BOLENGE",
+                    "email": "dondedieubolenge@gmail.com"
+                }
+            ],
+            "description": "Contient des fonctions",
+            "keywords": [
+                "eko",
+                "eko-helpers",
+                "ekolo",
+                "helpers"
+            ],
+            "time": "2020-02-27T13:53:58+00:00"
+        },
         {
             "name": "ekolo/eko-magic",
             "version": "0.3",
@@ -51,6 +93,44 @@
                 "parameterbag"
             ],
             "time": "2020-02-26T12:38:47+00:00"
+        },
+        {
+            "name": "ekolo/eko-session",
+            "version": "0.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ekolo-contributing/eko-session.git",
+                "reference": "e17d52792943f86abbe18d9853ed820d2ca8a487"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ekolo-contributing/eko-session/zipball/e17d52792943f86abbe18d9853ed820d2ca8a487",
+                "reference": "e17d52792943f86abbe18d9853ed820d2ca8a487",
+                "shasum": ""
+            },
+            "require": {
+                "ekolo/eko-helpers": "^0.3.1",
+                "ekolo/eko-magic": "^0.3.0",
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ekolo\\Component\\EkoSession\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Don de Dieu BOLENGE",
+                    "email": "dondedieubolenge@gmail.com"
+                }
+            ],
+            "description": "Module PHP permettant de g\u0000rer les sessions",
+            "time": "2020-03-04T10:36:05+00:00"
         }
     ],
     "packages-dev": [],

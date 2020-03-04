@@ -8,11 +8,14 @@
 	use Ekolo\Component\Http\Options\Params;
 	use Ekolo\Component\Http\Options\Bodies;
 	use Ekolo\Component\Http\HTTPRequest;
+	use Ekolo\Component\Http\RequestValidator;
 
     /**
      * @see Ekolo\Component\Http\RequestInterface
      */
     class Request extends HTTPRequest implements RequestInterface {
+
+		use RequestValidator;
 
 		protected $params,
 				  $body, 
