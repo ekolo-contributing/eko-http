@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0d14eaa2ee84fb6b057b5ceea394d260",
+    "content-hash": "e8b9a071d35bebf7ae53b796ebe781a2",
     "packages": [
         {
             "name": "ekolo/eko-helpers",
@@ -96,7 +96,7 @@
         },
         {
             "name": "ekolo/eko-session",
-            "version": "0.0.5",
+            "version": "0.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ekolo-contributing/eko-session.git",
