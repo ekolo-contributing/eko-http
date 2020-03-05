@@ -85,4 +85,35 @@
 
             return $_GET;
         }
+
+        /**
+         * Renvoi les clés des paramètres
+         * @return array
+         */
+        public function keys()
+        {
+            parent::keys();
+            return array_keys($_GET);
+        }
+
+        /**
+         * Vérifie si le parameter existe
+         * @param string $key
+         * @return bool
+         */
+        public function has($key)
+        {
+            parent::has();
+            return array_key_exists($key, $_GET);
+        }
+
+        /**
+         * Retourne Le nombre de parameters
+         * @return int
+         */
+        public function count()
+        {
+            parent::count();
+            return \count($_GET);
+        }
     }

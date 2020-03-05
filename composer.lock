@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fb1c96198b9c4de3481c1bd4bb67d3d3",
+    "content-hash": "0d14eaa2ee84fb6b057b5ceea394d260",
     "packages": [
         {
             "name": "ekolo/eko-helpers",
-            "version": "0.3.1",
+            "version": "0.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ekolo-contributing/eko-helpers.git",
-                "reference": "f5e4e5b4b0ba66c2a96bef78287fc0a94da69ebb"
+                "reference": "58ac7128d961488ecd48b98be51357c9eec248be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ekolo-contributing/eko-helpers/zipball/f5e4e5b4b0ba66c2a96bef78287fc0a94da69ebb",
-                "reference": "f5e4e5b4b0ba66c2a96bef78287fc0a94da69ebb",
+                "url": "https://api.github.com/repos/ekolo-contributing/eko-helpers/zipball/58ac7128d961488ecd48b98be51357c9eec248be",
+                "reference": "58ac7128d961488ecd48b98be51357c9eec248be",
                 "shasum": ""
             },
             "require": {
@@ -46,7 +46,7 @@
                 "ekolo",
                 "helpers"
             ],
-            "time": "2020-02-27T13:53:58+00:00"
+            "time": "2020-03-05T11:10:51+00:00"
         },
         {
             "name": "ekolo/eko-magic",
@@ -96,16 +96,16 @@
         },
         {
             "name": "ekolo/eko-session",
-            "version": "0.0.4",
+            "version": "0.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ekolo-contributing/eko-session.git",
-                "reference": "e17d52792943f86abbe18d9853ed820d2ca8a487"
+                "reference": "8b29523e867995494d5d2c4a1d6d2912d96c82e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ekolo-contributing/eko-session/zipball/e17d52792943f86abbe18d9853ed820d2ca8a487",
-                "reference": "e17d52792943f86abbe18d9853ed820d2ca8a487",
+                "url": "https://api.github.com/repos/ekolo-contributing/eko-session/zipball/8b29523e867995494d5d2c4a1d6d2912d96c82e8",
+                "reference": "8b29523e867995494d5d2c4a1d6d2912d96c82e8",
                 "shasum": ""
             },
             "require": {
@@ -130,7 +130,7 @@
                 }
             ],
             "description": "Module PHP permettant de g\u0000rer les sessions",
-            "time": "2020-03-04T10:36:05+00:00"
+            "time": "2020-03-04T12:08:59+00:00"
         }
     ],
     "packages-dev": [],
