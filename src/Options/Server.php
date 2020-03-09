@@ -19,7 +19,7 @@
         }
 
         /**
-         * Permet de modifier la valeur de GET
+         * Permet de modifier la valeur de SERVER
          * @param string $key La clé
          * @param mixed $value la valeur
          * @return void
@@ -31,7 +31,7 @@
         }
 
         /**
-         * Permet d'ajouter un nouveau tableau de GET
+         * Permet d'ajouter un nouveau tableau de SERVER
          * @param array $parameters Les paramètres à ajouter
          * @return void
          */
@@ -42,7 +42,7 @@
         }
 
         /**
-         * Remplace les variables GET
+         * Remplace les variables SERVER
          * @param array $parameters
          * @return void
          */
@@ -72,7 +72,7 @@
         {
             parent::get($key, $default);
 
-            return $_SERVER[$key];
+            return $this->has($key) ? $_SERVER[$key] : null;
         }
 
         /**
@@ -103,7 +103,7 @@
          */
         public function has($key)
         {
-            parent::has();
+            parent::has($key);
             return array_key_exists($key, $_SERVER);
         }
 

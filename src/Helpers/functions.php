@@ -12,7 +12,7 @@
          * @param string $key La clé de la session
          * @param mixed $value La valeur à assigner à la session
          */
-        function session(string $key, $value = null) {
+        function session(string $key = null, $value = null) {
             $session = new Session;
 
             if (!empty($key)) {

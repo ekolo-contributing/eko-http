@@ -116,7 +116,7 @@
         public function json($data, array $headers = [], int $status = null)
         {
             $headers[] = 'Content-Type: application/json';
-            $this->send($data, 'application/json', $status);
+            $this->send($data, $headers, $status);
         }
     }
     

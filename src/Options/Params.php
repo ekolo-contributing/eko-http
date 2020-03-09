@@ -14,8 +14,8 @@
 
         public function __construct(array $vars = [])
         {
-            $vars = !empty($vars) ? $vars : $_GET;
-            parent::__construct($vars);
+            $_GET = !empty($vars) ? array_merge($_GET, $vars) : $_GET;
+            parent::__construct($_GET);
         }
 
         /**
@@ -72,7 +72,7 @@
         {
             parent::get($key, $default);
 
-            return $_GET[$key];
+            return $this->has($key) ? $_GET[$key] : null;
         }
 
         /**
@@ -103,7 +103,7 @@
          */
         public function has($key)
         {
-            parent::has();
+            parent::has($key);
             return array_key_exists($key, $_GET);
         }
 

@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e8b9a071d35bebf7ae53b796ebe781a2",
+    "content-hash": "eb0d5776eb917b77a22f17a340421dbb",
     "packages": [
         {
             "name": "ekolo/eko-helpers",
-            "version": "0.3.3",
+            "version": "0.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ekolo-contributing/eko-helpers.git",
-                "reference": "58ac7128d961488ecd48b98be51357c9eec248be"
+                "reference": "4be901010e48f3950e3a85e4d7e9f5c9f45d20b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ekolo-contributing/eko-helpers/zipball/58ac7128d961488ecd48b98be51357c9eec248be",
-                "reference": "58ac7128d961488ecd48b98be51357c9eec248be",
+                "url": "https://api.github.com/repos/ekolo-contributing/eko-helpers/zipball/4be901010e48f3950e3a85e4d7e9f5c9f45d20b6",
+                "reference": "4be901010e48f3950e3a85e4d7e9f5c9f45d20b6",
                 "shasum": ""
             },
             "require": {
@@ -46,20 +46,20 @@
                 "ekolo",
                 "helpers"
             ],
-            "time": "2020-03-05T11:10:51+00:00"
+            "time": "2020-03-09T07:54:41+00:00"
         },
         {
             "name": "ekolo/eko-magic",
-            "version": "0.3",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ekolo-contributing/eko-magic.git",
-                "reference": "007f8b68be53abea10d1953df35123547e9f798b"
+                "reference": "1adb7d6648c996ecd29f95be446f88445fe8612c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ekolo-contributing/eko-magic/zipball/007f8b68be53abea10d1953df35123547e9f798b",
-                "reference": "007f8b68be53abea10d1953df35123547e9f798b",
+                "url": "https://api.github.com/repos/ekolo-contributing/eko-magic/zipball/1adb7d6648c996ecd29f95be446f88445fe8612c",
+                "reference": "1adb7d6648c996ecd29f95be446f88445fe8612c",
                 "shasum": ""
             },
             "require": {
@@ -92,25 +92,25 @@
                 "parameter",
                 "parameterbag"
             ],
-            "time": "2020-02-26T12:38:47+00:00"
+            "time": "2020-03-09T08:25:10+00:00"
         },
         {
             "name": "ekolo/eko-session",
-            "version": "0.0.9",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ekolo-contributing/eko-session.git",
-                "reference": "8b29523e867995494d5d2c4a1d6d2912d96c82e8"
+                "reference": "7c57e347968d7cafc3dd91ff022055a5bbfefd18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ekolo-contributing/eko-session/zipball/8b29523e867995494d5d2c4a1d6d2912d96c82e8",
-                "reference": "8b29523e867995494d5d2c4a1d6d2912d96c82e8",
+                "url": "https://api.github.com/repos/ekolo-contributing/eko-session/zipball/7c57e347968d7cafc3dd91ff022055a5bbfefd18",
+                "reference": "7c57e347968d7cafc3dd91ff022055a5bbfefd18",
                 "shasum": ""
             },
             "require": {
-                "ekolo/eko-helpers": "^0.3.1",
-                "ekolo/eko-magic": "^0.3.0",
+                "ekolo/eko-helpers": "^0.3.4",
+                "ekolo/eko-magic": "^0.3.1",
                 "php": ">=7.0"
             },
             "type": "library",
@@ -130,7 +130,7 @@
                 }
             ],
             "description": "Module PHP permettant de g\u0000rer les sessions",
-            "time": "2020-03-04T12:08:59+00:00"
+            "time": "2020-03-09T08:35:43+00:00"
         }
     ],
     "packages-dev": [],

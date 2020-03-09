@@ -1,4 +1,4 @@
-# ekolo/http
+# ekolo/eko-http
 
 C'est un module composant du framework `Ekolo` destiné à gérer et manipuler tous les traitements liés à toutes les requêtes et aux réponses `http`.
 

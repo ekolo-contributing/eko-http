@@ -12,8 +12,8 @@
     ],
     "require": {
         "php": ">=7.0",
-        "ekolo/eko-magic": "^0.3.0",
-        "ekolo/eko-session": "^0.0.9"
+        "ekolo/eko-magic": "^0.3.1",
+        "ekolo/eko-session": "^0.1.1"
     },
     "autoload": {
         "files": ["src/Helpers/functions.php"],

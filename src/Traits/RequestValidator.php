@@ -36,7 +36,7 @@
                 \session('errors', $this->errors);
             }
             
-            return $this->hasErrors();
+            return !$this->hasErrors();
         }
 
         /**
@@ -63,12 +63,15 @@
                                 throw new \Exception('La règle '.$regle.' n\'est pas (plus) pris en charge');
                             }
 
-                            if (count($tabARule) > 1) {
-                                $param = $tabARule[1];
+                            if (in_array('required', $fieldRules) || !empty($fieldValue)) {
 
-                                $this->$regle($field, $fieldValue, $param);
-                            }else {
-                                $this->$regle($field, $fieldValue);
+                                if (count($tabARule) > 1) {
+                                    $param = $tabARule[1];
+
+                                    $this->$regle($field, $fieldValue, $param);
+                                }else {
+                                    $this->$regle($field, $fieldValue);
+                                }
                             }
                         }
                     }
@@ -201,6 +204,22 @@
 
             if (!empty($error)) {
                 $this->addError($field, $error);
+            }
+        }
+
+        /**
+         * Vérifie si le champ est un numero de téléphone valide
+         * @param string $field Le nom du champ en question
+         * @param string $value La valeur du champ
+         * @return bool
+         */
+        public function tel($field, $value) 
+        {
+            $value = (string) $value;
+            $value = trim($value);
+    
+            if (!is_tel($value)) {
+                $this->addError($field, "doit être (ex: +24389... ou 089...)");
             }
         }
     }

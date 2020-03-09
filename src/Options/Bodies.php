@@ -14,8 +14,9 @@
 
         public function __construct(array $vars = [])
         {
-            $vars = !empty($vars) ? $vars : $_POST;
-            parent::__construct($vars);
+            parse_str(file_get_contents('php://input'), $_POST);
+            $_POST = !empty($vars) ? array_merge($_POST, $vars) : $_POST;
+            parent::__construct($_POST);
         }
 
         /**
@@ -72,7 +73,7 @@
         {
             parent::get($key, $default);
 
-            return $_POST[$key];
+            return $this->has($key) ? $_POST[$key] : null;
         }
 
         /**
@@ -103,7 +104,7 @@
          */
         public function has($key)
         {
-            parent::has();
+            parent::has($key);
             return array_key_exists($key, $_POST);
         }
 
