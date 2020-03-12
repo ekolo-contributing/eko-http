@@ -97,4 +97,13 @@
 		{
 			return $this->requestUri();
 		}
+
+		/**
+		 * Vérifie si la requête est en AJAX ou pas
+		 * @return bool
+		 */
+		public function ajax()
+		{
+			return 'XMLHttpRequest' == $this->headers->get('X-Requested-With');
+		}
     }

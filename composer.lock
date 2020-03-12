@@ -96,16 +96,16 @@
         },
         {
             "name": "ekolo/eko-session",
-            "version": "0.1.1",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ekolo-contributing/eko-session.git",
-                "reference": "7c57e347968d7cafc3dd91ff022055a5bbfefd18"
+                "reference": "aff430ba609342a916e3fb85a0871e2c3c2c17af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ekolo-contributing/eko-session/zipball/7c57e347968d7cafc3dd91ff022055a5bbfefd18",
-                "reference": "7c57e347968d7cafc3dd91ff022055a5bbfefd18",
+                "url": "https://api.github.com/repos/ekolo-contributing/eko-session/zipball/aff430ba609342a916e3fb85a0871e2c3c2c17af",
+                "reference": "aff430ba609342a916e3fb85a0871e2c3c2c17af",
                 "shasum": ""
             },
             "require": {
@@ -130,7 +130,7 @@
                 }
             ],
             "description": "Module PHP permettant de g\u0000rer les sessions",
-            "time": "2020-03-09T08:35:43+00:00"
+            "time": "2020-03-12T08:09:21+00:00"
         }
     ],
     "packages-dev": [],

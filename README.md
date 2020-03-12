@@ -7,7 +7,7 @@ C'est un module composant du framework `Ekolo` destiné à gérer et manipuler t
 Pour l'installer vous devez à avoir déjà composer installé. Si ce n'est pas le cas aller sur  [Composer](https://getcomposer.org/)
 
 ```bash
-$ composer require ekolo/http
+$ composer require ekolo/eko-http
 ```
 
 ## API
