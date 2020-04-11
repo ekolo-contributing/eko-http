@@ -7,6 +7,7 @@
 
 	use Ekolo\Component\Http\Options\Params;
 	use Ekolo\Component\Http\Options\Bodies;
+	use Ekolo\Component\Http\Options\Files;
 	use Ekolo\Component\Http\HTTPRequest;
 	use Ekolo\Component\Http\RequestValidator;
 
@@ -20,12 +21,14 @@
 		protected $params,
 				  $body, 
 				  $bodies,
+				  $files,
 				  $input;
 
 		public function __construct()
 		{
 			parent::__construct();
 			$this->params = new Params;
+			$this->files  = new Files;
 			$this->body   = new Bodies;
 		}
 
@@ -56,6 +59,21 @@
 				return $this->body->has($key) ? $this->body->get($key) : $default;
 			}else {
 				return $this->body;
+			}
+		}
+
+		/**
+		 * Manipule et renvoi les données du type FILES stockées dans $_FILES
+		 * @param string $key La clé de la valeur
+		 * @param mixed $default la valeur par défaut au cas où cette variable n'existe pas
+		 * @return mixed|Files
+		 */
+		public function files($key = null, $default = null)
+		{
+			if ($key) {
+				return $this->files->has($key) ? $this->files->get($key) : $default;
+			}else {
+				return $this->files;
 			}
 		}
 		

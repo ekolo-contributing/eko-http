@@ -222,5 +222,21 @@
                 $this->addError($field, "doit être (ex: +24389... ou 089...)");
             }
         }
+
+        /**
+         * Vérifie si le champ est numérique
+         * @param string $field Le nom du champ en question
+         * @param string $value La valeur du champ
+         * @return void
+         */
+        public function numeric($field, $value) 
+        {
+            $value = (string) $value;
+            $value = trim($value);
+    
+            if (!is_numeric($value)) {
+                $this->addError($field, "doit être numérique");
+            }
+        }
     }
     
