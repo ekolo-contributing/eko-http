@@ -41,7 +41,7 @@
          * @param array $headers Les headers à ajouter
          * @return void
          */
-        public function addHeaders(array $headers)
+        public function addHeaders(array $headers = [])
         {
             if (!empty($headers)) {
                 foreach ($headers as $header) {
@@ -117,6 +117,15 @@
         {
             $headers[] = 'Content-Type: application/json';
             $this->send($data, $headers, $status);
+        }
+
+        /**
+         * Rnvoi l'instance de Ekolo\Component\Http\Options\Server
+         * @return Server
+         */
+        public function server()
+        {
+            return $this->server;
         }
     }
     
